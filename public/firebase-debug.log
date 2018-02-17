@@ -1,0 +1,206 @@
+[debug] [2018-02-17T20:46:52.842Z] ----------------------------------------------------------------------
+[debug] [2018-02-17T20:46:52.844Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2018-02-17T20:46:52.844Z] CLI Version:   3.13.0
+[debug] [2018-02-17T20:46:52.844Z] Platform:      darwin
+[debug] [2018-02-17T20:46:52.844Z] Node Version:  v6.11.3
+[debug] [2018-02-17T20:46:52.845Z] Time:          Sat Feb 17 2018 14:46:52 GMT-0600 (CST)
+[debug] [2018-02-17T20:46:52.845Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-02-17T20:46:52.856Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-02-17T20:46:52.856Z] > authorizing via signed-in user
+[debug] [2018-02-17T20:46:52.858Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/fisk-1  
+ Sat Feb 17 2018 14:46:52 GMT-0600 (CST)
+[debug] [2018-02-17T20:46:53.247Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-17T20:46:53.248Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/fisk-1/tokens  
+ Sat Feb 17 2018 14:46:53 GMT-0600 (CST)
+[debug] [2018-02-17T20:46:53.651Z] <<< HTTP RESPONSE 200
+[info] 3
+[info] 
+[info] === Deploying to 'fisk-1'...
+[info] 
+[info] i  deploying database, storage, hosting
+[info] i  database: checking rules syntax...
+[debug] [2018-02-17T20:46:53.842Z] >>> HTTP REQUEST PUT https://fisk-1.firebaseio.com/.settings/rules.json?dryRun=true {
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
+ 
+ Sat Feb 17 2018 14:46:53 GMT-0600 (CST)
+[debug] [2018-02-17T20:46:54.070Z] <<< HTTP RESPONSE 200
+[info] ✔  database: rules syntax is valid
+[debug] [2018-02-17T20:46:54.072Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/fisk-1  
+ Sat Feb 17 2018 14:46:54 GMT-0600 (CST)
+[debug] [2018-02-17T20:46:54.676Z] <<< HTTP RESPONSE 200
+[info] i  storage: checking storage.rules for compilation errors...
+[debug] [2018-02-17T20:46:54.678Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/fisk-1:test { source: { files: [ [Object] ] } } 
+ Sat Feb 17 2018 14:46:54 GMT-0600 (CST)
+[debug] [2018-02-17T20:46:54.918Z] <<< HTTP RESPONSE 200
+[info] ✔  storage: rules file storage.rules compiled successfully
+[info] i  storage: uploading rules storage.rules...
+[debug] [2018-02-17T20:46:54.922Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/fisk-1/rulesets { source: { files: [ [Object] ] } } 
+ Sat Feb 17 2018 14:46:54 GMT-0600 (CST)
+[debug] [2018-02-17T20:46:55.289Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-17T20:46:55.290Z] [rules] created ruleset projects/fisk-1/rulesets/7751a673-872f-4499-92d5-0ef08e84aefc
+[info] i  hosting: preparing public directory for upload...
+[debug] [2018-02-17T20:46:55.312Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/fisk-1/uploads/-L5_W_4ccexghITwDXGS?fileCount=1&message=  
+ Sat Feb 17 2018 14:46:55 GMT-0600 (CST)
+[debug] [2018-02-17T20:46:55.899Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-17T20:46:55.899Z] [hosting] .tgz uploaded successfully, waiting for extraction
+[info] ✔  hosting: 1 files uploaded successfully
+[info] i  database: releasing rules...
+[debug] [2018-02-17T20:46:56.830Z] >>> HTTP REQUEST PUT https://fisk-1.firebaseio.com/.settings/rules.json {
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
+ 
+ Sat Feb 17 2018 14:46:56 GMT-0600 (CST)
+[debug] [2018-02-17T20:46:57.002Z] <<< HTTP RESPONSE 200
+[info] ✔  database: rules released successfully
+[debug] [2018-02-17T20:46:57.004Z] [rules] releasing firebase.storage/fisk-1.appspot.com with ruleset projects/fisk-1/rulesets/7751a673-872f-4499-92d5-0ef08e84aefc
+[debug] [2018-02-17T20:46:57.004Z] >>> HTTP REQUEST PUT https://firebaserules.googleapis.com/v1/projects/fisk-1/releases/firebase.storage/fisk-1.appspot.com { name: 'projects/fisk-1/releases/firebase.storage/fisk-1.appspot.com',
+  rulesetName: 'projects/fisk-1/rulesets/7751a673-872f-4499-92d5-0ef08e84aefc' } 
+ Sat Feb 17 2018 14:46:57 GMT-0600 (CST)
+[debug] [2018-02-17T20:46:57.150Z] <<< HTTP RESPONSE 404
+[debug] [2018-02-17T20:46:57.150Z] <<< HTTP RESPONSE BODY <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 404 (Not Found)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>404.</b> <ins>That’s an error.</ins>
+  <p>The requested URL <code>/v1/projects/fisk-1/releases/firebase.storage/fisk-1.appspot.com</code> was not found on this server.  <ins>That’s all we know.</ins>
+
+[debug] [2018-02-17T20:46:57.152Z] TypeError: Cannot create property 'error' on string '<!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 404 (Not Found)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>404.</b> <ins>That’s an error.</ins>
+  <p>The requested URL <code>/v1/projects/fisk-1/releases/firebase.storage/fisk-1.appspot.com</code> was not found on this server.  <ins>That’s all we know.</ins>
+'
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:11:16)
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:43:25)
+    at Request.self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:186:22)
+    at emitTwo (events.js:106:13)
+    at Request.emit (events.js:191:7)
+    at Request.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1163:10)
+    at emitOne (events.js:96:13)
+    at Request.emit (events.js:188:7)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1085:12)
+    at IncomingMessage.g (events.js:292:16)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-02-17T20:49:14.556Z] ----------------------------------------------------------------------
+[debug] [2018-02-17T20:49:14.559Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2018-02-17T20:49:14.559Z] CLI Version:   3.13.0
+[debug] [2018-02-17T20:49:14.559Z] Platform:      darwin
+[debug] [2018-02-17T20:49:14.559Z] Node Version:  v6.11.3
+[debug] [2018-02-17T20:49:14.560Z] Time:          Sat Feb 17 2018 14:49:14 GMT-0600 (CST)
+[debug] [2018-02-17T20:49:14.560Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-02-17T20:49:14.574Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-02-17T20:49:14.574Z] > authorizing via signed-in user
+[debug] [2018-02-17T20:49:14.576Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/fisk-1  
+ Sat Feb 17 2018 14:49:14 GMT-0600 (CST)
+[debug] [2018-02-17T20:49:14.991Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-17T20:49:14.993Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/fisk-1/tokens  
+ Sat Feb 17 2018 14:49:14 GMT-0600 (CST)
+[debug] [2018-02-17T20:49:15.372Z] <<< HTTP RESPONSE 200
+[info] 3
+[info] 
+[info] === Deploying to 'fisk-1'...
+[info] 
+[info] i  deploying database, storage, hosting
+[info] i  database: checking rules syntax...
+[debug] [2018-02-17T20:49:15.555Z] >>> HTTP REQUEST PUT https://fisk-1.firebaseio.com/.settings/rules.json?dryRun=true {
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
+ 
+ Sat Feb 17 2018 14:49:15 GMT-0600 (CST)
+[debug] [2018-02-17T20:49:15.736Z] <<< HTTP RESPONSE 200
+[info] ✔  database: rules syntax is valid
+[debug] [2018-02-17T20:49:15.737Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/fisk-1  
+ Sat Feb 17 2018 14:49:15 GMT-0600 (CST)
+[debug] [2018-02-17T20:49:16.190Z] <<< HTTP RESPONSE 200
+[info] i  storage: checking storage.rules for compilation errors...
+[debug] [2018-02-17T20:49:16.195Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/fisk-1:test { source: { files: [ [Object] ] } } 
+ Sat Feb 17 2018 14:49:16 GMT-0600 (CST)
+[debug] [2018-02-17T20:49:16.405Z] <<< HTTP RESPONSE 200
+[info] ✔  storage: rules file storage.rules compiled successfully
+[info] i  storage: uploading rules storage.rules...
+[debug] [2018-02-17T20:49:16.408Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/fisk-1/rulesets { source: { files: [ [Object] ] } } 
+ Sat Feb 17 2018 14:49:16 GMT-0600 (CST)
+[debug] [2018-02-17T20:49:16.804Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-17T20:49:16.804Z] [rules] created ruleset projects/fisk-1/rulesets/b6fd2b85-d544-4fc1-a0c3-920747229e69
+[info] i  hosting: preparing public directory for upload...
+[debug] [2018-02-17T20:49:16.834Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/fisk-1/uploads/-L5_X6cQLmWX-PzZlYSg?fileCount=1&message=  
+ Sat Feb 17 2018 14:49:16 GMT-0600 (CST)
+[debug] [2018-02-17T20:49:17.213Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-17T20:49:17.213Z] [hosting] .tgz uploaded successfully, waiting for extraction
+[info] ✔  hosting: 1 files uploaded successfully
+[info] i  database: releasing rules...
+[debug] [2018-02-17T20:49:17.934Z] >>> HTTP REQUEST PUT https://fisk-1.firebaseio.com/.settings/rules.json {
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
+ 
+ Sat Feb 17 2018 14:49:17 GMT-0600 (CST)
+[debug] [2018-02-17T20:49:18.340Z] <<< HTTP RESPONSE 200
+[info] ✔  database: rules released successfully
+[debug] [2018-02-17T20:49:18.341Z] [rules] releasing firebase.storage/fisk-1.appspot.com with ruleset projects/fisk-1/rulesets/b6fd2b85-d544-4fc1-a0c3-920747229e69
+[debug] [2018-02-17T20:49:18.342Z] >>> HTTP REQUEST PUT https://firebaserules.googleapis.com/v1/projects/fisk-1/releases/firebase.storage/fisk-1.appspot.com { name: 'projects/fisk-1/releases/firebase.storage/fisk-1.appspot.com',
+  rulesetName: 'projects/fisk-1/rulesets/b6fd2b85-d544-4fc1-a0c3-920747229e69' } 
+ Sat Feb 17 2018 14:49:18 GMT-0600 (CST)
+[debug] [2018-02-17T20:49:18.487Z] <<< HTTP RESPONSE 404
+[debug] [2018-02-17T20:49:18.488Z] <<< HTTP RESPONSE BODY <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 404 (Not Found)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>404.</b> <ins>That’s an error.</ins>
+  <p>The requested URL <code>/v1/projects/fisk-1/releases/firebase.storage/fisk-1.appspot.com</code> was not found on this server.  <ins>That’s all we know.</ins>
+
+[debug] [2018-02-17T20:49:18.489Z] TypeError: Cannot create property 'error' on string '<!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 404 (Not Found)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>404.</b> <ins>That’s an error.</ins>
+  <p>The requested URL <code>/v1/projects/fisk-1/releases/firebase.storage/fisk-1.appspot.com</code> was not found on this server.  <ins>That’s all we know.</ins>
+'
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:11:16)
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:43:25)
+    at Request.self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:186:22)
+    at emitTwo (events.js:106:13)
+    at Request.emit (events.js:191:7)
+    at Request.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1163:10)
+    at emitOne (events.js:96:13)
+    at Request.emit (events.js:188:7)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1085:12)
+    at IncomingMessage.g (events.js:292:16)
+[error] 
+[error] Error: An unexpected error has occurred.

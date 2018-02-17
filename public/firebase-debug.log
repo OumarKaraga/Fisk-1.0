@@ -204,3 +204,35 @@
     at IncomingMessage.g (events.js:292:16)
 [error] 
 [error] Error: An unexpected error has occurred.
+[debug] [2018-02-17T21:16:47.621Z] ----------------------------------------------------------------------
+[debug] [2018-02-17T21:16:47.624Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-02-17T21:16:47.624Z] CLI Version:   3.17.4
+[debug] [2018-02-17T21:16:47.624Z] Platform:      darwin
+[debug] [2018-02-17T21:16:47.624Z] Node Version:  v6.11.3
+[debug] [2018-02-17T21:16:47.625Z] Time:          Sat Feb 17 2018 15:16:47 GMT-0600 (CST)
+[debug] [2018-02-17T21:16:47.625Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-02-17T21:16:47.637Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-02-17T21:16:47.637Z] > authorizing via signed-in user
+[debug] [2018-02-17T21:16:47.639Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/fisk-1  
+  
+ Sat Feb 17 2018 15:16:47 GMT-0600 (CST)
+[debug] [2018-02-17T21:16:47.907Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-17T21:16:47.908Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/fisk-1/tokens  
+  
+ Sat Feb 17 2018 15:16:47 GMT-0600 (CST)
+[debug] [2018-02-17T21:16:48.191Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/oumarkaraga/Documents/GitHub/Fisk-1.0'...
+[info] 
+[debug] [2018-02-17T21:16:48.194Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/fisk-1  
+  
+ Sat Feb 17 2018 15:16:48 GMT-0600 (CST)
+[debug] [2018-02-17T21:16:48.455Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-17T21:16:48.456Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/812294749883/clients/_:getWebAppConfig  
+  
+ Sat Feb 17 2018 15:16:48 GMT-0600 (CST)
+[debug] [2018-02-17T21:16:49.110Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+

@@ -1,6 +1,8 @@
 
 var databaseRef = new Firebase("https://fisk-1.firebaseio.com/");
 
+"https://fisk-1.firebaseapp.com/"
+
 
 function collectDataFromNewUser() {
 
@@ -11,7 +13,7 @@ function collectDataFromNewUser() {
     var location = "";
     var preferences = {
     	education: "",
-    	sports: "",
+    	sport: "",
     }
 
     databaseRef.child("users").push(
@@ -93,21 +95,13 @@ function isAUserAlready(username, password, usernames, passWords) {
     return false;
 }
 
-function getIDs(allUsers) {
-    var ids = [];
-    for (var key in allUsers){
-        ids.push(key)
-    }
-}
-
 
 async function loginReturningUser() {
-
+    console.log("logged in!");
     var username = document.getElementById("usernameLogin").value;
     var password = document.getElementById("passwordLogin").value;
 
     var allUsers = await currentUsers();
-    getIDs(allUsers);
     var usernames = userNames(allUsers);
     var passwords = passWords(allUsers);
 

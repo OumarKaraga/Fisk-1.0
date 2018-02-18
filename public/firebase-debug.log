@@ -1,32 +1,32 @@
-[debug] [2018-02-18T07:43:12.441Z] ----------------------------------------------------------------------
-[debug] [2018-02-18T07:43:12.444Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
-[debug] [2018-02-18T07:43:12.444Z] CLI Version:   3.17.4
-[debug] [2018-02-18T07:43:12.444Z] Platform:      darwin
-[debug] [2018-02-18T07:43:12.444Z] Node Version:  v6.11.3
-[debug] [2018-02-18T07:43:12.445Z] Time:          Sun Feb 18 2018 01:43:12 GMT-0600 (CST)
-[debug] [2018-02-18T07:43:12.445Z] ----------------------------------------------------------------------
+[debug] [2018-02-18T02:09:23.599Z] ----------------------------------------------------------------------
+[debug] [2018-02-18T02:09:23.601Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-02-18T02:09:23.602Z] CLI Version:   3.17.4
+[debug] [2018-02-18T02:09:23.602Z] Platform:      darwin
+[debug] [2018-02-18T02:09:23.602Z] Node Version:  v6.11.3
+[debug] [2018-02-18T02:09:23.602Z] Time:          Sat Feb 17 2018 20:09:23 GMT-0600 (CST)
+[debug] [2018-02-18T02:09:23.602Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-02-18T07:43:12.460Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-02-18T07:43:12.461Z] > authorizing via signed-in user
-[debug] [2018-02-18T07:43:12.463Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/fisk-1  
+[debug] [2018-02-18T02:09:23.615Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-02-18T02:09:23.615Z] > authorizing via signed-in user
+[debug] [2018-02-18T02:09:23.618Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/fisk-1  
   
- Sun Feb 18 2018 01:43:12 GMT-0600 (CST)
-[debug] [2018-02-18T07:43:12.993Z] <<< HTTP RESPONSE 200
-[debug] [2018-02-18T07:43:12.995Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/fisk-1/tokens  
+ Sat Feb 17 2018 20:09:23 GMT-0600 (CST)
+[debug] [2018-02-18T02:09:23.970Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-18T02:09:23.971Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/fisk-1/tokens  
   
- Sun Feb 18 2018 01:43:12 GMT-0600 (CST)
-[debug] [2018-02-18T07:43:13.397Z] <<< HTTP RESPONSE 200
+ Sat Feb 17 2018 20:09:23 GMT-0600 (CST)
+[debug] [2018-02-18T02:09:24.458Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from '/Users/oumarkaraga/Documents/GitHub/Fisk-1.0'...
 [info] 
-[debug] [2018-02-18T07:43:13.400Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/fisk-1  
+[debug] [2018-02-18T02:09:24.461Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/fisk-1  
   
- Sun Feb 18 2018 01:43:13 GMT-0600 (CST)
-[debug] [2018-02-18T07:43:13.618Z] <<< HTTP RESPONSE 200
-[debug] [2018-02-18T07:43:13.618Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/812294749883/clients/_:getWebAppConfig  
+ Sat Feb 17 2018 20:09:24 GMT-0600 (CST)
+[debug] [2018-02-18T02:09:24.767Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-18T02:09:24.767Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/812294749883/clients/_:getWebAppConfig  
   
- Sun Feb 18 2018 01:43:13 GMT-0600 (CST)
-[debug] [2018-02-18T07:43:14.112Z] <<< HTTP RESPONSE 200
+ Sat Feb 17 2018 20:09:24 GMT-0600 (CST)
+[debug] [2018-02-18T02:09:25.175Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] ✔  hosting: Local server: http://localhost:5000
 
